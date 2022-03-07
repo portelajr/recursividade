@@ -8,9 +8,8 @@ def study_schedule(permanence_period, target_time):
         if type(student[0]) is not int or type(student[1]) is not int:
             return None
 
-        # print(target_time)
         if (student[0] <= target_time <= student[1]) is True:
-            # print("here!")
+
             present_students = present_students + 1
     return present_students
 
