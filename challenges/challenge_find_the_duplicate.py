@@ -33,13 +33,12 @@ def merge(left, right, merged):
 
 def find_duplicate(nums):
     sorted_array = merge_sort(nums)
-    # max_i = (len(sorted_array) - 1)
-    # duplicated = ""
+
     for i in range(1, len(sorted_array)):
+        if (type(sorted_array[i]) == str) or sorted_array[i] < 0:
+            return False
+
         if sorted_array[i] == sorted_array[i - 1]:
-            print(sorted_array[i])
             return sorted_array[i]
 
     return False
-
-# print(find_duplicate([1, 3, 5, 4, 7, 9]))
