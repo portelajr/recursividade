@@ -13,10 +13,8 @@ def merge(left, right, merged):
 
     left_cursor, right_cursor = 0, 0
 
-    # enquanto nenhumas das partes é percorrida por completo
     while left_cursor < len(left) and right_cursor < len(right):
 
-        # compare os dois itens das partes e insira no array de mistura o menor
         if left[left_cursor] <= right[right_cursor]:
             merged[left_cursor + right_cursor] = left[left_cursor]
             left_cursor += 1
@@ -33,9 +31,6 @@ def merge(left, right, merged):
     return merged
 
 
-# print(merge_sort([100, 4, 6, 33, 56, 67]))
-
-
 def is_anagram(first_string, second_string):
 
     if len(first_string) == 0 or len(second_string) == 0:
@@ -49,11 +44,7 @@ def is_anagram(first_string, second_string):
     sorted_chars_first = merge_sort(char_list_first)
     sorted_chars_second = merge_sort(char_list_second)
 
-    # print(sorted_chars_first)
-    # print(sorted_chars_second)
-
     for index, letter in enumerate(sorted_chars_first):
-        print(letter, index)
         if sorted_chars_first[index] != sorted_chars_second[index]:
             return False
     return True
