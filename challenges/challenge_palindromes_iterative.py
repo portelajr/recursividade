@@ -1,6 +1,3 @@
-# from math import ceil
-
-
 def is_palindrome_iterative(word):
     min_index = 0
     max_index = len(word) - 1

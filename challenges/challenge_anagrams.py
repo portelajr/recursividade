@@ -44,7 +44,7 @@ def is_anagram(first_string, second_string):
     sorted_chars_first = merge_sort(char_list_first)
     sorted_chars_second = merge_sort(char_list_second)
 
-    for index, letter in enumerate(sorted_chars_first):
+    for index in range(0, len(sorted_chars_first) - 1):
         if sorted_chars_first[index] != sorted_chars_second[index]:
             return False
     return True
